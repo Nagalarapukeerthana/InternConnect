@@ -1,0 +1,6 @@
+{
+  "name": "InternConnect",
+  "description": "Full-stack internship platform featuring multilingual support, resume builder with secure payments, verified community space, and role-based access control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

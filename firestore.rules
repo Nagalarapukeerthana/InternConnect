@@ -1,0 +1,117 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // USERS COLLECTION (Contains private PII like email, phone)
+    match /users/{userId} {
+      allow get: if isOwner(userId) || isAdmin();
+      allow list: if isAdmin();
+      // Account registration or profile updates are gated via backend server or strict owner
+      allow create: if isOwner(userId) && request.resource.data.role in ['student', 'employer']
+                    && request.resource.data.id == userId;
+      allow update: if isOwner(userId)
+                    && request.resource.data.id == resource.data.id
+                    && request.resource.data.role == resource.data.role;
+      allow delete: if isAdmin();
+    }
+
+    // PROFILES COLLECTION (Public profile showcase)
+    match /profiles/{userId} {
+      allow read: if isSignedIn();
+      allow write: if isOwner(userId) || isAdmin();
+    }
+
+    // INTERNSHIPS (Public readable, employer/admin writable)
+    match /internships/{internshipId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // APPLICATIONS
+    match /applications/{applicationId} {
+      allow get: if isSignedIn() && (resource.data.studentId == request.auth.uid || isAdmin());
+      allow list: if isSignedIn() && (request.auth.uid != null);
+      // Created and managed through server validation (checking subscription allowance)
+      allow write: if isAdmin();
+    }
+
+    // RESUMES
+    match /resumes/{resumeId} {
+      allow get: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow write: if isAdmin(); // Resumes generated only via verified server payment
+    }
+
+    // PUBLIC SPACE POSTS
+    match /posts/{postId} {
+      allow read: if isSignedIn();
+      // Server-authoritative posting limits based on friend count:
+      // Writes are processed through backend API to enforce strict atomic rate limits
+      allow write: if isAdmin();
+    }
+
+    // POST COMMENTS
+    match /posts/{postId}/comments/{commentId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn() && request.resource.data.authorId == request.auth.uid;
+      allow update, delete: if isSignedIn() && (resource.data.authorId == request.auth.uid || isAdmin());
+    }
+
+    // FRIENDSHIPS
+    match /friendships/{friendshipId} {
+      allow read: if isSignedIn() && (resource.data.userA == request.auth.uid || resource.data.userB == request.auth.uid || isAdmin());
+      allow write: if isAdmin();
+    }
+
+    // FRIEND REQUESTS
+    match /friendRequests/{requestId} {
+      allow read: if isSignedIn() && (resource.data.fromUserId == request.auth.uid || resource.data.toUserId == request.auth.uid || isAdmin());
+      allow create: if isSignedIn() && request.resource.data.fromUserId == request.auth.uid;
+      allow update: if isSignedIn() && (resource.data.toUserId == request.auth.uid || resource.data.fromUserId == request.auth.uid);
+      allow delete: if isSignedIn() && (resource.data.fromUserId == request.auth.uid || resource.data.toUserId == request.auth.uid || isAdmin());
+    }
+
+    // LOGIN HISTORY (Strict security isolation)
+    match /loginHistory/{historyId} {
+      allow get: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow list: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow write: if isAdmin(); // Server logs attempts
+    }
+
+    // SUBSCRIPTIONS
+    match /subscriptions/{userId} {
+      allow get: if isOwner(userId) || isAdmin();
+      allow list: if isAdmin();
+      allow write: if isAdmin(); // Managed server-side via Razorpay webhook
+    }
+
+    // INVOICES
+    match /invoices/{invoiceId} {
+      allow get: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow write: if isAdmin();
+    }
+  }
+}

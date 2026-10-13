@@ -1,0 +1,1438 @@
+export type Language = 'en' | 'es' | 'hi' | 'pt' | 'zh' | 'fr';
+
+export interface Translations {
+  nav: {
+    home: string;
+    browseInternships: string;
+    resumeBuilder: string;
+    publicSpace: string;
+    subscriptions: string;
+    loginHistory: string;
+    profile: string;
+    settings: string;
+    login: string;
+    register: string;
+    logout: string;
+    language: string;
+  };
+  home: {
+    heroTitle: string;
+    heroSubtitle: string;
+    exploreBtn: string;
+    buildResumeBtn: string;
+    featuredHeading: string;
+    categoriesHeading: string;
+    statsApplications: string;
+    statsCompanies: string;
+    statsStipend: string;
+    whyTitle: string;
+    why1Title: string;
+    why1Desc: string;
+    why2Title: string;
+    why2Desc: string;
+    why3Title: string;
+    why3Desc: string;
+  };
+  internships: {
+    title: string;
+    subtitle: string;
+    searchPlaceholder: string;
+    allCategories: string;
+    remoteOnly: string;
+    minStipend: string;
+    applyNow: string;
+    applied: string;
+    viewDetails: string;
+    stipendMonth: string;
+    duration: string;
+    openings: string;
+    deadline: string;
+    requirements: string;
+    perks: string;
+    noResults: string;
+    quotaAlert: string;
+    applyModalTitle: string;
+    selectResume: string;
+    noResumeAlert: string;
+    createResumeNow: string;
+    coverLetterLabel: string;
+    submitApplication: string;
+  };
+  resume: {
+    title: string;
+    subtitle: string;
+    feeNotice: string;
+    step1: string;
+    step2: string;
+    step3: string;
+    personalInfo: string;
+    fullName: string;
+    email: string;
+    phone: string;
+    location: string;
+    summary: string;
+    education: string;
+    degree: string;
+    institution: string;
+    year: string;
+    score: string;
+    skills: string;
+    experience: string;
+    projects: string;
+    certifications: string;
+    addEducation: string;
+    addSkill: string;
+    addExperience: string;
+    addProject: string;
+    addCertification: string;
+    verifyOtpAndPay: string;
+    otpPrompt: string;
+    enterOtp: string;
+    proceedToPayment: string;
+    downloadPdf: string;
+    paymentSuccess: string;
+  };
+  community: {
+    title: string;
+    subtitle: string;
+    postingStatus: string;
+    createPost: string;
+    postPlaceholder: string;
+    uploadMedia: string;
+    publishBtn: string;
+    friendsCount: string;
+    zeroFriendsWarning: string;
+    limitReachedWarning: string;
+    unlimitedPosts: string;
+    like: string;
+    comment: string;
+    share: string;
+    commentsHeader: string;
+    addComment: string;
+    connectWithPeers: string;
+    sendFriendRequest: string;
+    connected: string;
+    instantConnectBtn: string;
+  };
+  loginHistory: {
+    title: string;
+    subtitle: string;
+    timestamp: string;
+    browser: string;
+    os: string;
+    device: string;
+    ipAddress: string;
+    status: string;
+    reason: string;
+    successBadge: string;
+    blockedBadge: string;
+    isolationNotice: string;
+  };
+  subscription: {
+    title: string;
+    subtitle: string;
+    currentPlan: string;
+    applicationsUsed: string;
+    quotaRemaining: string;
+    upgradePlan: string;
+    selectPlan: string;
+    checkoutWindowNotice: string;
+    checkoutWindowActive: string;
+    checkoutWindowClosed: string;
+    freePlanName: string;
+    freePlanPrice: string;
+    freePlanAllowance: string;
+    bronzePlanName: string;
+    bronzePlanPrice: string;
+    bronzePlanAllowance: string;
+    silverPlanName: string;
+    silverPlanPrice: string;
+    silverPlanAllowance: string;
+    goldPlanName: string;
+    goldPlanPrice: string;
+    goldPlanAllowance: string;
+    invoicesTitle: string;
+    invoiceNum: string;
+    date: string;
+    amount: string;
+    reference: string;
+    downloadInvoice: string;
+  };
+  auth: {
+    loginTitle: string;
+    registerTitle: string;
+    forgotPasswordTitle: string;
+    emailOrPhone: string;
+    email: string;
+    phone: string;
+    password: string;
+    fullName: string;
+    signInBtn: string;
+    signUpBtn: string;
+    noAccount: string;
+    haveAccount: string;
+    forgotPasswordLink: string;
+    resetNotice: string;
+    requestResetBtn: string;
+    chromeOtpTitle: string;
+    chromeOtpPrompt: string;
+    verifyChromeOtpBtn: string;
+    mobileWindowAlert: string;
+  };
+  settings: {
+    title: string;
+    changePasswordTitle: string;
+    currentPassword: string;
+    newPassword: string;
+    updatePasswordBtn: string;
+    languageTitle: string;
+    frenchOtpTitle: string;
+    frenchOtpPrompt: string;
+    verifyFrenchBtn: string;
+  };
+  legal: {
+    privacyTitle: string;
+    termsTitle: string;
+    lastUpdated: string;
+  };
+  common: {
+    loading: string;
+    cancel: string;
+    close: string;
+    save: string;
+    error: string;
+    success: string;
+  };
+}
+
+export const translations: Record<Language, Translations> = {
+  en: {
+    nav: {
+      home: 'Home',
+      browseInternships: 'Internships',
+      resumeBuilder: 'Resume Builder',
+      publicSpace: 'Community',
+      subscriptions: 'Pricing & Plans',
+      loginHistory: 'Security Logs',
+      profile: 'My Profile',
+      settings: 'Settings',
+      login: 'Sign In',
+      register: 'Get Started',
+      logout: 'Sign Out',
+      language: 'Language',
+    },
+    home: {
+      heroTitle: 'Accelerate Your Career with Verified Internships',
+      heroSubtitle: 'Connect with verified top-tier tech companies, craft professional resumes with secure verification, and engage with a trusted peer community.',
+      exploreBtn: 'Explore Opportunities',
+      buildResumeBtn: 'Build Resume (₹50)',
+      featuredHeading: 'Featured High-Impact Internships',
+      categoriesHeading: 'Browse by Industry Sector',
+      statsApplications: '12,500+ Applications Processed',
+      statsCompanies: '450+ Verified Hiring Partners',
+      statsStipend: '₹35,000 Max Monthly Stipend',
+      whyTitle: 'Why Students Trust InternConnect',
+      why1Title: 'Zero-Trust Environment Security',
+      why1Desc: 'Chrome OTP enforcement, mobile time-window governance, and strictly isolated personal audit trails.',
+      why2Title: 'Cryptographic Resumes & Billing',
+      why2Desc: 'Automated Razorpay signature verification and instant tamper-proof PDF generation.',
+      why3Title: 'Verified Peer Community',
+      why3Desc: 'Server-authoritative posting limits anchored in authentic bilateral student friendships.',
+    },
+    internships: {
+      title: 'Explore Internship Opportunities',
+      subtitle: 'Find high-stipend remote and on-site internships across software engineering, data science, and design.',
+      searchPlaceholder: 'Search by role, company, or tech stack...',
+      allCategories: 'All Disciplines',
+      remoteOnly: 'Remote Only',
+      minStipend: 'Min Stipend',
+      applyNow: 'Apply Now',
+      applied: 'Applied',
+      viewDetails: 'View Details',
+      stipendMonth: '/ month',
+      duration: 'Duration',
+      openings: 'Openings',
+      deadline: 'Application Deadline',
+      requirements: 'Key Requirements',
+      perks: 'Perks & Benefits',
+      noResults: 'No internships match your current search filters.',
+      quotaAlert: 'Monthly application quota reached. Upgrade your subscription to apply.',
+      applyModalTitle: 'Apply for Internship',
+      selectResume: 'Select Verified Resume',
+      noResumeAlert: 'You do not have a verified resume. Generate one with Resume Builder first.',
+      createResumeNow: 'Build Resume First',
+      coverLetterLabel: 'Cover Letter / Introduction Note',
+      submitApplication: 'Submit Application',
+    },
+    resume: {
+      title: 'Professional Resume Builder',
+      subtitle: 'Build an industry-standard, ATS-optimized resume. Gated by email OTP and ₹50 Razorpay payment.',
+      feeNotice: 'Official Generation Fee: ₹50.00 (Includes permanent cloud storage and unlimited attachments)',
+      step1: '1. Resume Content',
+      step2: '2. Email OTP Authorization',
+      step3: '3. Razorpay Payment & PDF',
+      personalInfo: 'Personal & Contact Information',
+      fullName: 'Full Name',
+      email: 'Email Address',
+      phone: 'Phone Number',
+      location: 'Location (City, Country)',
+      summary: 'Professional Summary',
+      education: 'Academic Qualifications',
+      degree: 'Degree / Course',
+      institution: 'Institution / University',
+      year: 'Graduation Year',
+      score: 'Grade / CGPA',
+      skills: 'Technical & Professional Skills',
+      experience: 'Work & Internship Experience',
+      projects: 'Key Projects',
+      certifications: 'Licenses & Certifications',
+      addEducation: '+ Add Qualification',
+      addSkill: '+ Add Skill',
+      addExperience: '+ Add Experience',
+      addProject: '+ Add Project',
+      addCertification: '+ Add Certification',
+      verifyOtpAndPay: 'Verify Email & Proceed to Payment',
+      otpPrompt: 'Enter the 6-digit verification code dispatched to your registered email to unlock payment.',
+      enterOtp: 'Enter 6-digit OTP',
+      proceedToPayment: 'Pay ₹50 with Razorpay',
+      downloadPdf: 'Download Official PDF',
+      paymentSuccess: 'Payment verified! Your official resume is now ready and linked to your profile.',
+    },
+    community: {
+      title: 'Public Space Student Community',
+      subtitle: 'Connect with peers, share project milestones, and collaborate. Posting limits are determined by your accepted friendships.',
+      postingStatus: 'Daily Posting Allowance',
+      createPost: 'Create a Community Post',
+      postPlaceholder: "What's on your mind? Share your internship journey or project updates...",
+      uploadMedia: 'Attach Media (Image / Video URL)',
+      publishBtn: 'Publish Post',
+      friendsCount: 'Accepted Friends',
+      zeroFriendsWarning: '0 friends connected: You cannot post yet. Add friends to unlock posting privileges.',
+      limitReachedWarning: 'Daily limit reached for your friendship tier.',
+      unlimitedPosts: '10+ Friends: Unlimited daily posts unlocked!',
+      like: 'Like',
+      comment: 'Comment',
+      share: 'Share',
+      commentsHeader: 'Responses',
+      addComment: 'Write a response...',
+      connectWithPeers: 'Discover & Connect',
+      sendFriendRequest: 'Connect',
+      connected: 'Connected',
+      instantConnectBtn: 'Quick Connect (Demo)',
+    },
+    loginHistory: {
+      title: 'Security Audit & Login History',
+      subtitle: 'Monitor all access attempts across browsers, operating systems, and IP addresses. Strictly isolated to your account.',
+      timestamp: 'Timestamp (UTC/IST)',
+      browser: 'Browser Engine',
+      os: 'Operating System',
+      device: 'Device Category',
+      ipAddress: 'IP Address',
+      status: 'Status',
+      reason: 'Audit Notes / Reason',
+      successBadge: 'Authorized',
+      blockedBadge: 'Access Blocked',
+      isolationNotice: 'Security Invariant: You can strictly view only your own login attempts. Zero cross-tenant leakage.',
+    },
+    subscription: {
+      title: 'Subscription Plans & Application Allowances',
+      subtitle: 'Scale your internship reach. Payment initiation is permitted strictly between 10:00 AM and 11:00 AM IST.',
+      currentPlan: 'Current Tier',
+      applicationsUsed: 'Applications Used This Month',
+      quotaRemaining: 'Applications Remaining',
+      upgradePlan: 'Upgrade Subscription',
+      selectPlan: 'Select Plan',
+      checkoutWindowNotice: 'Official Checkout Window: 10:00 AM – 11:00 AM IST (Asia/Kolkata)',
+      checkoutWindowActive: 'Checkout window is currently OPEN. Payments accepted.',
+      checkoutWindowClosed: 'Checkout window is currently CLOSED. Payments are accepted strictly between 10:00 AM and 11:00 AM IST.',
+      freePlanName: 'Free Tier',
+      freePlanPrice: '₹0 / month',
+      freePlanAllowance: '1 application / month',
+      bronzePlanName: 'Bronze Tier',
+      bronzePlanPrice: '₹100 / month',
+      bronzePlanAllowance: '3 applications / month',
+      silverPlanName: 'Silver Tier',
+      silverPlanPrice: '₹300 / month',
+      silverPlanAllowance: '5 applications / month',
+      goldPlanName: 'Gold Tier',
+      goldPlanPrice: '₹1,000 / month',
+      goldPlanAllowance: 'Unlimited applications',
+      invoicesTitle: 'Billing History & Tax Invoices',
+      invoiceNum: 'Invoice Number',
+      date: 'Billing Date',
+      amount: 'Amount Paid',
+      reference: 'Razorpay Reference',
+      downloadInvoice: 'View Invoice',
+    },
+    auth: {
+      loginTitle: 'Welcome Back to InternConnect',
+      registerTitle: 'Create Your Student Account',
+      forgotPasswordTitle: 'Recover Account Access',
+      emailOrPhone: 'Registered Email or Phone',
+      email: 'Email Address',
+      phone: 'Phone (+91...)',
+      password: 'Password',
+      fullName: 'Full Legal Name',
+      signInBtn: 'Sign In to InternConnect',
+      signUpBtn: 'Complete Registration',
+      noAccount: "Don't have an account?",
+      haveAccount: 'Already registered?',
+      forgotPasswordLink: 'Forgot password?',
+      resetNotice: 'You can use this option only once per day.',
+      requestResetBtn: 'Send Temporary Password',
+      chromeOtpTitle: 'Google Chrome Security Challenge',
+      chromeOtpPrompt: 'Google Chrome browser detected. To safeguard your account, enter the 6-digit OTP sent to your email.',
+      verifyChromeOtpBtn: 'Verify OTP & Authorize Session',
+      mobileWindowAlert: 'Mobile device logins are permitted strictly between 10:00 AM and 1:00 PM IST.',
+    },
+    settings: {
+      title: 'Account Settings & Preferences',
+      changePasswordTitle: 'Update Password',
+      currentPassword: 'Current Password',
+      newPassword: 'New Secure Password',
+      updatePasswordBtn: 'Update Password',
+      languageTitle: 'Platform Internationalization',
+      frenchOtpTitle: 'French Language Security Verification',
+      frenchOtpPrompt: 'Switching to French requires mandatory email OTP verification as per security policy.',
+      verifyFrenchBtn: 'Verify & Activate French',
+    },
+    legal: {
+      privacyTitle: 'Privacy Policy & Zero-Trust Governance',
+      termsTitle: 'Terms of Service & Internship Compliance',
+      lastUpdated: 'Last Updated: October 2026',
+    },
+    common: {
+      loading: 'Processing securely...',
+      cancel: 'Cancel',
+      close: 'Close',
+      save: 'Save Changes',
+      error: 'An error occurred',
+      success: 'Operation completed successfully',
+    },
+  },
+
+  es: {
+    nav: {
+      home: 'Inicio',
+      browseInternships: 'Pasantías',
+      resumeBuilder: 'Creador de CV',
+      publicSpace: 'Comunidad',
+      subscriptions: 'Planes y Precios',
+      loginHistory: 'Historial de Seguridad',
+      profile: 'Mi Perfil',
+      settings: 'Ajustes',
+      login: 'Iniciar Sesión',
+      register: 'Registrarse',
+      logout: 'Cerrar Sesión',
+      language: 'Idioma',
+    },
+    home: {
+      heroTitle: 'Acelera Tu Carrera con Pasantías Verificadas',
+      heroSubtitle: 'Conecta con empresas de primer nivel, crea currículums profesionales con verificación segura y participa en una comunidad de confianza.',
+      exploreBtn: 'Explorar Oportunidades',
+      buildResumeBtn: 'Crear Currículum (₹50)',
+      featuredHeading: 'Pasantías Destacadas de Alto Impacto',
+      categoriesHeading: 'Explorar por Sector',
+      statsApplications: '+12,500 Postulaciones Procesadas',
+      statsCompanies: '+450 Empresas Verificadas',
+      statsStipend: '₹35,000 Estipendio Mensual Máximo',
+      whyTitle: 'Por Qué los Estudiantes Confían en InternConnect',
+      why1Title: 'Seguridad Zero-Trust',
+      why1Desc: 'Verificación OTP para Chrome, horario estricto para móviles y registros de auditoría aislados.',
+      why2Title: 'Currículums y Pagos Criptográficos',
+      why2Desc: 'Verificación de firmas con Razorpay y generación instantánea de PDF.',
+      why3Title: 'Comunidad de Pares Verificada',
+      why3Desc: 'Límites de publicación basados en amistades estudiantiles bilaterales auténticas.',
+    },
+    internships: {
+      title: 'Explorar Oportunidades de Pasantías',
+      subtitle: 'Encuentra pasantías remotas y presenciales con excelentes estipendios.',
+      searchPlaceholder: 'Buscar por rol, empresa o tecnologías...',
+      allCategories: 'Todas las Disciplinas',
+      remoteOnly: 'Solo Remoto',
+      minStipend: 'Estipendio Mínimo',
+      applyNow: 'Postularme',
+      applied: 'Postulado',
+      viewDetails: 'Ver Detalles',
+      stipendMonth: '/ mes',
+      duration: 'Duración',
+      openings: 'Vacantes',
+      deadline: 'Fecha Límite',
+      requirements: 'Requisitos Clave',
+      perks: 'Beneficios',
+      noResults: 'No se encontraron pasantías con los filtros actuales.',
+      quotaAlert: 'Límite mensual alcanzado. Actualiza tu plan para postularte.',
+      applyModalTitle: 'Postular a la Pasantía',
+      selectResume: 'Seleccionar Currículum Verificado',
+      noResumeAlert: 'No tienes un currículum verificado. Crea uno primero.',
+      createResumeNow: 'Crear Currículum Primero',
+      coverLetterLabel: 'Carta de Presentación',
+      submitApplication: 'Enviar Postulación',
+    },
+    resume: {
+      title: 'Creador de Currículum Profesional',
+      subtitle: 'Crea un CV optimizado para ATS. Protegido por OTP de correo y pago de ₹50 por Razorpay.',
+      feeNotice: 'Tarifa Oficial: ₹50.00 (Incluye almacenamiento permanente en la nube y adjuntos ilimitados)',
+      step1: '1. Contenido del Currículum',
+      step2: '2. Verificación OTP por Correo',
+      step3: '3. Pago Razorpay y PDF',
+      personalInfo: 'Información Personal y de Contacto',
+      fullName: 'Nombre Completo',
+      email: 'Correo Electrónico',
+      phone: 'Teléfono',
+      location: 'Ubicación',
+      summary: 'Resumen Profesional',
+      education: 'Formación Académica',
+      degree: 'Grado / Carrera',
+      institution: 'Institución / Universidad',
+      year: 'Año de Graduación',
+      score: 'Calificación / Promedio',
+      skills: 'Habilidades Técnicas y Profesionales',
+      experience: 'Experiencia Laboral',
+      projects: 'Proyectos Principales',
+      certifications: 'Certificaciones',
+      addEducation: '+ Agregar Formación',
+      addSkill: '+ Agregar Habilidad',
+      addExperience: '+ Agregar Experiencia',
+      addProject: '+ Agregar Proyecto',
+      addCertification: '+ Agregar Certificación',
+      verifyOtpAndPay: 'Verificar Correo y Proceder al Pago',
+      otpPrompt: 'Ingresa el código OTP de 6 dígitos enviado a tu correo.',
+      enterOtp: 'Ingresa OTP de 6 dígitos',
+      proceedToPayment: 'Pagar ₹50 con Razorpay',
+      downloadPdf: 'Descargar PDF Oficial',
+      paymentSuccess: '¡Pago verificado! Tu currículum ya está disponible.',
+    },
+    community: {
+      title: 'Espacio Público de la Comunidad',
+      subtitle: 'Conéctate con compañeros y comparte tus logros. Los límites de publicación dependen de tus amigos confirmados.',
+      postingStatus: 'Límite Diario de Publicaciones',
+      createPost: 'Crear Publicación',
+      postPlaceholder: '¿Qué estás pensando? Comparte tus avances...',
+      uploadMedia: 'Adjuntar Multimedia (URL de Imagen / Video)',
+      publishBtn: 'Publicar',
+      friendsCount: 'Amigos Aceptados',
+      zeroFriendsWarning: '0 amigos: No puedes publicar todavía. Conéctate con amigos para empezar.',
+      limitReachedWarning: 'Límite diario alcanzado para tu nivel de amigos.',
+      unlimitedPosts: '¡Más de 10 amigos: Publicaciones ilimitadas habilitadas!',
+      like: 'Me Gusta',
+      comment: 'Comentar',
+      share: 'Compartir',
+      commentsHeader: 'Comentarios',
+      addComment: 'Escribe un comentario...',
+      connectWithPeers: 'Descubrir y Conectar',
+      sendFriendRequest: 'Conectar',
+      connected: 'Conectado',
+      instantConnectBtn: 'Conexión Rápida (Demo)',
+    },
+    loginHistory: {
+      title: 'Auditoría de Seguridad e Historial',
+      subtitle: 'Monitorea todos los intentos de acceso. Información aislada únicamente a tu cuenta.',
+      timestamp: 'Fecha y Hora',
+      browser: 'Navegador',
+      os: 'Sistema Operativo',
+      device: 'Dispositivo',
+      ipAddress: 'Dirección IP',
+      status: 'Estado',
+      reason: 'Notas / Motivo',
+      successBadge: 'Autorizado',
+      blockedBadge: 'Bloqueado',
+      isolationNotice: 'Aislamiento de seguridad: Solo puedes ver tus propios registros.',
+    },
+    subscription: {
+      title: 'Planes de Suscripción y Cuotas',
+      subtitle: 'Amplía tus postulaciones. Los pagos solo se permiten entre las 10:00 AM y 11:00 AM IST.',
+      currentPlan: 'Plan Actual',
+      applicationsUsed: 'Postulaciones Usadas Este Mes',
+      quotaRemaining: 'Postulaciones Restantes',
+      upgradePlan: 'Mejorar Suscripción',
+      selectPlan: 'Seleccionar Plan',
+      checkoutWindowNotice: 'Horario Oficial de Pago: 10:00 AM – 11:00 AM IST (Asia/Kolkata)',
+      checkoutWindowActive: 'La ventana de pago está ABIERTA.',
+      checkoutWindowClosed: 'La ventana de pago está CERRADA. Pagos permitidos de 10:00 AM a 11:00 AM IST.',
+      freePlanName: 'Plan Gratis',
+      freePlanPrice: '₹0 / mes',
+      freePlanAllowance: '1 postulación / mes',
+      bronzePlanName: 'Plan Bronce',
+      bronzePlanPrice: '₹100 / mes',
+      bronzePlanAllowance: '3 postulaciones / mes',
+      silverPlanName: 'Plan Plata',
+      silverPlanPrice: '₹300 / mes',
+      silverPlanAllowance: '5 postulaciones / mes',
+      goldPlanName: 'Plan Oro',
+      goldPlanPrice: '₹1,000 / mes',
+      goldPlanAllowance: 'Postulaciones Ilimitadas',
+      invoicesTitle: 'Historial de Facturación',
+      invoiceNum: 'Número de Factura',
+      date: 'Fecha',
+      amount: 'Monto Pagado',
+      reference: 'Referencia Razorpay',
+      downloadInvoice: 'Ver Factura',
+    },
+    auth: {
+      loginTitle: 'Bienvenido de Nuevo a InternConnect',
+      registerTitle: 'Crear Cuenta de Estudiante',
+      forgotPasswordTitle: 'Recuperar Contraseña',
+      emailOrPhone: 'Correo o Teléfono Registrado',
+      email: 'Correo Electrónico',
+      phone: 'Teléfono (+91...)',
+      password: 'Contraseña',
+      fullName: 'Nombre Completo',
+      signInBtn: 'Iniciar Sesión',
+      signUpBtn: 'Completar Registro',
+      noAccount: '¿No tienes una cuenta?',
+      haveAccount: '¿Ya estás registrado?',
+      forgotPasswordLink: '¿Olvidaste tu contraseña?',
+      resetNotice: 'You can use this option only once per day.',
+      requestResetBtn: 'Enviar Contraseña Temporal',
+      chromeOtpTitle: 'Verificación de Seguridad para Google Chrome',
+      chromeOtpPrompt: 'Navegador Chrome detectado. Ingresa el código OTP de 6 dígitos enviado a tu correo.',
+      verifyChromeOtpBtn: 'Verificar OTP y Acceder',
+      mobileWindowAlert: 'El acceso móvil solo está permitido entre las 10:00 AM y 1:00 PM IST.',
+    },
+    settings: {
+      title: 'Configuración de la Cuenta',
+      changePasswordTitle: 'Actualizar Contraseña',
+      currentPassword: 'Contraseña Actual',
+      newPassword: 'Nueva Contraseña Segura',
+      updatePasswordBtn: 'Actualizar Contraseña',
+      languageTitle: 'Internacionalización de la Plataforma',
+      frenchOtpTitle: 'Verificación de Seguridad para Francés',
+      frenchOtpPrompt: 'Cambiar al idioma francés requiere verificación por OTP según las políticas de seguridad.',
+      verifyFrenchBtn: 'Verificar y Activar Francés',
+    },
+    legal: {
+      privacyTitle: 'Política de Privacidad y Gobernanza',
+      termsTitle: 'Términos de Servicio y Cumplimiento',
+      lastUpdated: 'Última actualización: Octubre 2026',
+    },
+    common: {
+      loading: 'Procesando con seguridad...',
+      cancel: 'Cancelar',
+      close: 'Cerrar',
+      save: 'Guardar Cambios',
+      error: 'Ocurrió un error',
+      success: 'Operación completada con éxito',
+    },
+  },
+
+  hi: {
+    nav: {
+      home: 'होम',
+      browseInternships: 'इंटर्नशिप्स',
+      resumeBuilder: 'रेज़्यूमे बिल्डर',
+      publicSpace: 'कम्युनिटी',
+      subscriptions: 'प्लान्स व बिलिंग',
+      loginHistory: 'सुरक्षा इतिहास',
+      profile: 'मेरी प्रोफाइल',
+      settings: 'सेटिंग्स',
+      login: 'साइन इन',
+      register: 'रजिस्टर करें',
+      logout: 'लॉग आउट',
+      language: 'भाषा',
+    },
+    home: {
+      heroTitle: 'सत्यापित इंटर्नशिप्स के साथ अपना करियर शुरू करें',
+      heroSubtitle: 'शीर्ष कंपनियों से जुड़ें, सुरक्षित सत्यापन के साथ पेशेवर रेज़्यूमे बनाएं और भरोसेमंद छात्रों से संपर्क करें।',
+      exploreBtn: 'अवसर खोजें',
+      buildResumeBtn: 'रेज़्यूमे बनाएं (₹50)',
+      featuredHeading: 'प्रमुख इंटर्नशिप्स',
+      categoriesHeading: 'श्रेणी के अनुसार खोजें',
+      statsApplications: '12,500+ आवेदन संसाधित',
+      statsCompanies: '450+ सत्यापित कंपनियां',
+      statsStipend: '₹35,000 अधिकतम मासिक स्टाइपेंड',
+      whyTitle: 'InternConnect पर छात्र क्यों भरोसा करते हैं',
+      why1Title: 'जीरो-ट्रस्ट सुरक्षा प्रणाली',
+      why1Desc: 'क्रोम ओटीपी सुरक्षा, मोबाइल टाइम विंडो और व्यक्तिगत सुरक्षित ऑडिट लॉग्स।',
+      why2Title: 'सुरक्षित रेज़्यूमे और भुगतान',
+      why2Desc: 'रेज़रपे सिग्नेचर वेरिफिकेशन और तुरंत पीडीएफ जनरेशन।',
+      why3Title: 'सत्यापित छात्र समुदाय',
+      why3Desc: 'मित्रों की संख्या के आधार पर पोस्टिंग नियम।',
+    },
+    internships: {
+      title: 'इंटर्नशिप के अवसर खोजें',
+      subtitle: 'सॉफ्टवेयर, डेटा साइंस और डिज़ाइन में बेहतरीन स्टाइपेंड वाली इंटर्नशिप पाएं।',
+      searchPlaceholder: 'रोल, कंपनी या स्किल से खोजें...',
+      allCategories: 'सभी श्रेणियां',
+      remoteOnly: 'केवल रिमोट',
+      minStipend: 'न्यूनतम स्टाइपेंड',
+      applyNow: 'आवेदन करें',
+      applied: 'आवेदन किया गया',
+      viewDetails: 'विवरण देखें',
+      stipendMonth: '/ माह',
+      duration: 'अवधि',
+      openings: 'रिक्तियां',
+      deadline: 'अंतिम तिथि',
+      requirements: 'मुख्य आवश्यकताएं',
+      perks: 'लाभ व सुविधाएं',
+      noResults: 'कोई इंटर्नशिप नहीं मिली।',
+      quotaAlert: 'मासिक आवेदन सीमा समाप्त हो गई है। प्लान अपग्रेड करें।',
+      applyModalTitle: 'इंटर्नशिप आवेदन',
+      selectResume: 'सत्यापित रेज़्यूमे चुनें',
+      noResumeAlert: 'आपके पास सत्यापित रेज़्यूमे नहीं है। पहले रेज़्यूमे बनाएं।',
+      createResumeNow: 'पहले रेज़्यूमे बनाएं',
+      coverLetterLabel: 'कवर लेटर / परिचय',
+      submitApplication: 'आवेदन जमा करें',
+    },
+    resume: {
+      title: 'पेशेवर रेज़्यूमे बिल्डर',
+      subtitle: 'एटीएस-अनुकूलित रेज़्यूमे बनाएं। ईमेल ओटीपी और ₹50 रेज़रपे भुगतान द्वारा सुरक्षित।',
+      feeNotice: 'आधिकारिक शुल्क: ₹50.00 (आजीवन क्लाउड स्टोरेज और असीमित अटैचमेंट शामिल)',
+      step1: '1. रेज़्यूमे जानकारी',
+      step2: '2. ईमेल ओटीपी सत्यापन',
+      step3: '3. रेज़रपे भुगतान व पीडीएफ',
+      personalInfo: 'व्यक्तिगत और संपर्क विवरण',
+      fullName: 'पूरा नाम',
+      email: 'ईमेल पता',
+      phone: 'फ़ोन नंबर',
+      location: 'स्थान (शहर, देश)',
+      summary: 'पेशेवर सारांश',
+      education: 'शैक्षणिक योग्यताएं',
+      degree: 'डिग्री / कोर्स',
+      institution: 'संस्थान / कॉलेज',
+      year: 'पासिंग वर्ष',
+      score: 'अंक / सीजीपीए',
+      skills: 'तकनीकी कौशल',
+      experience: 'कार्य अनुभव',
+      projects: 'प्रमुख प्रोजेक्ट्स',
+      certifications: 'प्रमाणपत्र',
+      addEducation: '+ योग्यता जोड़ें',
+      addSkill: '+ कौशल जोड़ें',
+      addExperience: '+ अनुभव जोड़ें',
+      addProject: '+ प्रोजेक्ट जोड़ें',
+      addCertification: '+ प्रमाणपत्र जोड़ें',
+      verifyOtpAndPay: 'ईमेल सत्यापित करें और भुगतान करें',
+      otpPrompt: 'भुगतान शुरू करने के लिए ईमेल पर भेजा गया 6-अंकीय ओटीपी दर्ज करें।',
+      enterOtp: '6-अंकीय ओटीपी दर्ज करें',
+      proceedToPayment: 'रेज़रपे से ₹50 का भुगतान करें',
+      downloadPdf: 'आधिकारिक पीडीएफ डाउनलोड करें',
+      paymentSuccess: 'भुगतान सत्यापित! आपका रेज़्यूमे तैयार है।',
+    },
+    community: {
+      title: 'पब्लिक स्पेस छात्र समुदाय',
+      subtitle: 'साथी छात्रों से जुड़ें और उपलब्धियां साझा करें। पोस्टिंग सीमा आपके मित्रों की संख्या पर निर्भर करती है।',
+      postingStatus: 'दैनिक पोस्टिंग सीमा',
+      createPost: 'नई पोस्ट बनाएं',
+      postPlaceholder: 'आप क्या सोच रहे हैं? अपनी प्रगति साझा करें...',
+      uploadMedia: 'मीडिया अटैच करें (इमेज / वीडियो यूआरएल)',
+      publishBtn: 'पोस्ट प्रकाशित करें',
+      friendsCount: 'स्वीकृत मित्र',
+      zeroFriendsWarning: '0 मित्र: आप अभी पोस्ट नहीं कर सकते। मित्रों से जुड़ें।',
+      limitReachedWarning: 'आज की दैनिक सीमा समाप्त हो चुकी है।',
+      unlimitedPosts: '10+ मित्र: असीमित पोस्टिंग सक्रिय!',
+      like: 'पसंद करें',
+      comment: 'टिप्पणी',
+      share: 'साझा करें',
+      commentsHeader: 'टिप्पणियां',
+      addComment: 'टिप्पणी लिखें...',
+      connectWithPeers: 'छात्रों को खोजें और जुड़ें',
+      sendFriendRequest: 'मित्र बनाएं',
+      connected: 'जुड़े हुए हैं',
+      instantConnectBtn: 'तुरंत जोड़ें (डेमो)',
+    },
+    loginHistory: {
+      title: 'सुरक्षा ऑडिट व लॉगिन इतिहास',
+      subtitle: 'सभी लॉगिन प्रयासों की निगरानी करें। यह डेटा केवल आपके खाते के लिए सुरक्षित है।',
+      timestamp: 'समय',
+      browser: 'ब्राउज़र',
+      os: 'ऑपरेटिंग सिस्टम',
+      device: 'डिवाइस',
+      ipAddress: 'आईपी पता',
+      status: 'स्थिति',
+      reason: 'कारण / विवरण',
+      successBadge: 'सत्यापित',
+      blockedBadge: 'अवरुद्ध',
+      isolationNotice: 'सुरक्षा नियम: आप केवल अपना स्वयं का इतिहास देख सकते हैं।',
+    },
+    subscription: {
+      title: 'सब्सक्रिप्शन प्लान्स और कोटा',
+      subtitle: 'अधिक इंटर्नशिप में आवेदन करें। भुगतान केवल सुबह 10:00 से 11:00 IST के बीच मान्य है।',
+      currentPlan: 'वर्तमान प्लान',
+      applicationsUsed: 'इस महीने उपयोग किए गए आवेदन',
+      quotaRemaining: 'शेष आवेदन',
+      upgradePlan: 'प्लान अपग्रेड करें',
+      selectPlan: 'प्लान चुनें',
+      checkoutWindowNotice: 'आधिकारिक भुगतान समय: सुबह 10:00 AM – 11:00 AM IST',
+      checkoutWindowActive: 'भुगतान विंडो वर्तमान में खुली है।',
+      checkoutWindowClosed: 'भुगतान विंडो बंद है। भुगतान केवल 10:00 AM - 11:00 AM IST के बीच होगा।',
+      freePlanName: 'फ्री प्लान',
+      freePlanPrice: '₹0 / माह',
+      freePlanAllowance: '1 आवेदन / माह',
+      bronzePlanName: 'ब्रॉन्ज प्लान',
+      bronzePlanPrice: '₹100 / माह',
+      bronzePlanAllowance: '3 आवेदन / माह',
+      silverPlanName: 'सिल्वर प्लान',
+      silverPlanPrice: '₹300 / माह',
+      silverPlanAllowance: '5 आवेदन / माह',
+      goldPlanName: 'गोल्ड प्लान',
+      goldPlanPrice: '₹1,000 / माह',
+      goldPlanAllowance: 'असीमित आवेदन',
+      invoicesTitle: 'बिलिंग इतिहास व इनवॉइस',
+      invoiceNum: 'इनवॉइस संख्या',
+      date: 'तारीख',
+      amount: 'राशि',
+      reference: 'रेज़रपे संदर्भ',
+      downloadInvoice: 'इनवॉइस देखें',
+    },
+    auth: {
+      loginTitle: 'InternConnect में पुनः स्वागत है',
+      registerTitle: 'छात्र खाता बनाएं',
+      forgotPasswordTitle: 'पासवर्ड रीसेट करें',
+      emailOrPhone: 'पंजीकृत ईमेल या फ़ोन',
+      email: 'ईमेल पता',
+      phone: 'फ़ोन नंबर (+91...)',
+      password: 'पासवर्ड',
+      fullName: 'पूरा नाम',
+      signInBtn: 'साइन इन करें',
+      signUpBtn: 'रजिस्ट्रेशन पूरा करें',
+      noAccount: 'खाता नहीं है?',
+      haveAccount: 'पहले से पंजीकृत हैं?',
+      forgotPasswordLink: 'पासवर्ड भूल गए?',
+      resetNotice: 'You can use this option only once per day.',
+      requestResetBtn: 'अस्थायी पासवर्ड भेजें',
+      chromeOtpTitle: 'गूगल क्रोम सुरक्षा चुनौती',
+      chromeOtpPrompt: 'गूगल क्रोम ब्राउज़र का पता चला। ईमेल पर भेजा गया 6-अंकीय ओटीपी दर्ज करें।',
+      verifyChromeOtpBtn: 'ओटीपी सत्यापित करें',
+      mobileWindowAlert: 'मोबाइल लॉगिन केवल सुबह 10:00 AM से 1:00 PM IST के बीच संभव है।',
+    },
+    settings: {
+      title: 'खाता सेटिंग्स',
+      changePasswordTitle: 'पासवर्ड बदलें',
+      currentPassword: 'वर्तमान पासवर्ड',
+      newPassword: 'नया पासवर्ड',
+      updatePasswordBtn: 'पासवर्ड अपडेट करें',
+      languageTitle: 'भाषा प्राथमिकता',
+      frenchOtpTitle: 'फ्रेंच भाषा सुरक्षा सत्यापन',
+      frenchOtpPrompt: 'सुरक्षा नीति के अनुसार फ्रेंच भाषा चुनने के लिए ईमेल ओटीपी अनिवार्य है।',
+      verifyFrenchBtn: 'सत्यापित करें और फ्रेंच लागू करें',
+    },
+    legal: {
+      privacyTitle: 'गोपनीयता नीति',
+      termsTitle: 'नियम और शर्तें',
+      lastUpdated: 'अंतिम अपडेट: अक्टूबर 2026',
+    },
+    common: {
+      loading: 'प्रक्रिया जारी है...',
+      cancel: 'रद्द करें',
+      close: 'बंद करें',
+      save: 'सहेजें',
+      error: 'त्रुटि हुई',
+      success: 'सफलतापूर्वक पूर्ण',
+    },
+  },
+
+  pt: {
+    nav: {
+      home: 'Início',
+      browseInternships: 'Estágios',
+      resumeBuilder: 'Criador de Currículo',
+      publicSpace: 'Comunidade',
+      subscriptions: 'Planos e Preços',
+      loginHistory: 'Segurança',
+      profile: 'Meu Perfil',
+      settings: 'Configurações',
+      login: 'Entrar',
+      register: 'Cadastre-se',
+      logout: 'Sair',
+      language: 'Idioma',
+    },
+    home: {
+      heroTitle: 'Acelere sua Carreira com Estágios Verificados',
+      heroSubtitle: 'Conecte-se com as melhores empresas, crie currículos com verificação segura e interaja com estudantes confiáveis.',
+      exploreBtn: 'Explorar Vagas',
+      buildResumeBtn: 'Criar Currículo (₹50)',
+      featuredHeading: 'Estágios em Destaque',
+      categoriesHeading: 'Navegar por Setor',
+      statsApplications: '+12.500 Candidaturas',
+      statsCompanies: '+450 Empresas Parceiras',
+      statsStipend: 'Bolsa Máxima de ₹35.000',
+      whyTitle: 'Por Que Confiar no InternConnect',
+      why1Title: 'Segurança Zero-Trust',
+      why1Desc: 'Desafio OTP para Chrome e governança de janela móvel.',
+      why2Title: 'Currículos e Pagamentos Criptográficos',
+      why2Desc: 'Assinaturas verificadas pelo Razorpay e PDFs instantâneos.',
+      why3Title: 'Comunidade Verificada',
+      why3Desc: 'Regras de postagem diária baseadas em amizades reais.',
+    },
+    internships: {
+      title: 'Vagas de Estágio Disponíveis',
+      subtitle: 'Encontre estágios remotos e presenciais de alto nível.',
+      searchPlaceholder: 'Buscar por vaga, empresa ou tecnologia...',
+      allCategories: 'Todas as Áreas',
+      remoteOnly: 'Apenas Remoto',
+      minStipend: 'Bolsa Mínima',
+      applyNow: 'Candidatar-se',
+      applied: 'Inscrito',
+      viewDetails: 'Ver Detalhes',
+      stipendMonth: '/ mês',
+      duration: 'Duração',
+      openings: 'Vagas',
+      deadline: 'Prazo',
+      requirements: 'Requisitos',
+      perks: 'Benefícios',
+      noResults: 'Nenhuma vaga encontrada com esses filtros.',
+      quotaAlert: 'Cota de candidatura mensal atingida. Atualize seu plano.',
+      applyModalTitle: 'Candidatura de Estágio',
+      selectResume: 'Selecione o Currículo Verificado',
+      noResumeAlert: 'Você não possui currículo verificado. Crie um primeiro.',
+      createResumeNow: 'Criar Currículo Primeiro',
+      coverLetterLabel: 'Carta de Apresentação',
+      submitApplication: 'Enviar Candidatura',
+    },
+    resume: {
+      title: 'Criador Profissional de Currículo',
+      subtitle: 'Currículo otimizado para ATS. Protegido por OTP e pagamento de ₹50.',
+      feeNotice: 'Taxa Oficial: ₹50.00 (Armazenamento permanente incluído)',
+      step1: '1. Conteúdo',
+      step2: '2. Validação OTP',
+      step3: '3. Pagamento e PDF',
+      personalInfo: 'Informações Pessoais',
+      fullName: 'Nome Completo',
+      email: 'E-mail',
+      phone: 'Telefone',
+      location: 'Localização',
+      summary: 'Resumo Profissional',
+      education: 'Educação',
+      degree: 'Curso / Grau',
+      institution: 'Instituição',
+      year: 'Ano de Conclusão',
+      score: 'Nota / Média',
+      skills: 'Habilidades',
+      experience: 'Experiência',
+      projects: 'Projetos',
+      certifications: 'Certificações',
+      addEducation: '+ Adicionar Educação',
+      addSkill: '+ Adicionar Habilidade',
+      addExperience: '+ Adicionar Experiência',
+      addProject: '+ Adicionar Projeto',
+      addCertification: '+ Adicionar Certificação',
+      verifyOtpAndPay: 'Verificar E-mail e Pagar',
+      otpPrompt: 'Digite o código OTP de 6 dígitos enviado ao seu e-mail.',
+      enterOtp: 'Digite o OTP de 6 dígitos',
+      proceedToPayment: 'Pagar ₹50 com Razorpay',
+      downloadPdf: 'Baixar PDF Oficial',
+      paymentSuccess: 'Pagamento confirmado! Seu currículo está pronto.',
+    },
+    community: {
+      title: 'Comunidade Estudantil',
+      subtitle: 'Conecte-se com colegas. Limites de postagem baseados em amigos.',
+      postingStatus: 'Limite de Postagens Diárias',
+      createPost: 'Criar Postagem',
+      postPlaceholder: 'O que você está desenvolvendo hoje?',
+      uploadMedia: 'Anexar Mídia (URL da Imagem / Vídeo)',
+      publishBtn: 'Publicar',
+      friendsCount: 'Amigos Aceitos',
+      zeroFriendsWarning: '0 amigos: Adicione amigos para postar.',
+      limitReachedWarning: 'Limite diário atingido.',
+      unlimitedPosts: '10+ Amigos: Postagens ilimitadas!',
+      like: 'Curtir',
+      comment: 'Comentar',
+      share: 'Compartilhar',
+      commentsHeader: 'Comentários',
+      addComment: 'Escreva um comentário...',
+      connectWithPeers: 'Conectar com Estudantes',
+      sendFriendRequest: 'Conectar',
+      connected: 'Conectado',
+      instantConnectBtn: 'Conexão Rápida (Demo)',
+    },
+    loginHistory: {
+      title: 'Histórico de Acesso e Segurança',
+      subtitle: 'Monitore todas as tentativas de login. Registros isolados e seguros.',
+      timestamp: 'Horário',
+      browser: 'Navegador',
+      os: 'Sistema',
+      device: 'Dispositivo',
+      ipAddress: 'Endereço IP',
+      status: 'Status',
+      reason: 'Motivo',
+      successBadge: 'Autorizado',
+      blockedBadge: 'Bloqueado',
+      isolationNotice: 'Você tem acesso exclusivo aos seus próprios registros.',
+    },
+    subscription: {
+      title: 'Planos de Assinatura',
+      subtitle: 'Pagamentos permitidos estritamente das 10h às 11h IST.',
+      currentPlan: 'Plano Atual',
+      applicationsUsed: 'Candidaturas Usadas',
+      quotaRemaining: 'Candidaturas Restantes',
+      upgradePlan: 'Fazer Upgrade',
+      selectPlan: 'Escolher Plano',
+      checkoutWindowNotice: 'Janela de Pagamento: 10:00 – 11:00 IST',
+      checkoutWindowActive: 'Janela de pagamento ABERTA.',
+      checkoutWindowClosed: 'Janela de pagamento FECHADA.',
+      freePlanName: 'Plano Grátis',
+      freePlanPrice: '₹0 / mês',
+      freePlanAllowance: '1 candidatura / mês',
+      bronzePlanName: 'Plano Bronze',
+      bronzePlanPrice: '₹100 / mês',
+      bronzePlanAllowance: '3 candidaturas / mês',
+      silverPlanName: 'Plano Prata',
+      silverPlanPrice: '₹300 / mês',
+      silverPlanAllowance: '5 candidaturas / mês',
+      goldPlanName: 'Plano Ouro',
+      goldPlanPrice: '₹1.000 / mês',
+      goldPlanAllowance: 'Candidaturas Ilimitadas',
+      invoicesTitle: 'Histórico de Faturas',
+      invoiceNum: 'Número da Fatura',
+      date: 'Data',
+      amount: 'Valor Pago',
+      reference: 'Referência',
+      downloadInvoice: 'Visualizar Fatura',
+    },
+    auth: {
+      loginTitle: 'Entrar no InternConnect',
+      registerTitle: 'Cadastro de Estudante',
+      forgotPasswordTitle: 'Recuperar Senha',
+      emailOrPhone: 'E-mail ou Telefone',
+      email: 'E-mail',
+      phone: 'Telefone (+91...)',
+      password: 'Senha',
+      fullName: 'Nome Completo',
+      signInBtn: 'Entrar',
+      signUpBtn: 'Cadastrar',
+      noAccount: 'Não tem conta?',
+      haveAccount: 'Já tem conta?',
+      forgotPasswordLink: 'Esqueceu a senha?',
+      resetNotice: 'You can use this option only once per day.',
+      requestResetBtn: 'Enviar Senha Temporária',
+      chromeOtpTitle: 'Verificação Google Chrome',
+      chromeOtpPrompt: 'Navegador Chrome detectado. Digite o OTP de 6 dígitos enviado por e-mail.',
+      verifyChromeOtpBtn: 'Verificar e Entrar',
+      mobileWindowAlert: 'Logins via celular são permitidos apenas das 10h às 13h IST.',
+    },
+    settings: {
+      title: 'Configurações de Conta',
+      changePasswordTitle: 'Alterar Senha',
+      currentPassword: 'Senha Atual',
+      newPassword: 'Nova Senha',
+      updatePasswordBtn: 'Atualizar Senha',
+      languageTitle: 'Idioma',
+      frenchOtpTitle: 'Verificação para Francês',
+      frenchOtpPrompt: 'A troca para o francês exige verificação de segurança por OTP.',
+      verifyFrenchBtn: 'Verificar e Ativar Francês',
+    },
+    legal: {
+      privacyTitle: 'Política de Privacidade',
+      termsTitle: 'Termos de Serviço',
+      lastUpdated: 'Atualizado em: Outubro 2026',
+    },
+    common: {
+      loading: 'Processando com segurança...',
+      cancel: 'Cancelar',
+      close: 'Fechar',
+      save: 'Salvar',
+      error: 'Ocorreu um erro',
+      success: 'Operação concluída',
+    },
+  },
+
+  zh: {
+    nav: {
+      home: '首页',
+      browseInternships: '实习机会',
+      resumeBuilder: '简历制作器',
+      publicSpace: '社区空间',
+      subscriptions: '订阅与方案',
+      loginHistory: '安全审计',
+      profile: '个人资料',
+      settings: '设置',
+      login: '登录',
+      register: '注册',
+      logout: '退出',
+      language: '语言',
+    },
+    home: {
+      heroTitle: '通过经过验证的实习加速您的职业发展',
+      heroSubtitle: '与顶级技术企业建立联系，制作经过安全验证的专业简历，并加入值得信赖的社区。',
+      exploreBtn: '探索机会',
+      buildResumeBtn: '制作简历 (₹50)',
+      featuredHeading: '精选高价值实习机会',
+      categoriesHeading: '按行业分类浏览',
+      statsApplications: '已处理 12,500+ 份申请',
+      statsCompanies: '450+ 认证招聘伙伴',
+      statsStipend: '最高 ₹35,000 月度津贴',
+      whyTitle: '为什么学生信赖 InternConnect',
+      why1Title: '零信任安全环境',
+      why1Desc: 'Chrome OTP 认证、移动设备时段治理与严格隔离的审计跟踪。',
+      why2Title: '加密简历与支付',
+      why2Desc: 'Razorpay 签名校验与防篡改 PDF 即时生成。',
+      why3Title: '认证同行社区',
+      why3Desc: '基于真实好友关系的日发帖限额规则。',
+    },
+    internships: {
+      title: '浏览实习机会',
+      subtitle: '探索软件开发、人工智能和设计领域的远程与实地实习岗位。',
+      searchPlaceholder: '按职位、公司或技术栈搜索...',
+      allCategories: '所有学科',
+      remoteOnly: '仅远程',
+      minStipend: '最低津贴',
+      applyNow: '立即申请',
+      applied: '已申请',
+      viewDetails: '查看详情',
+      stipendMonth: '/ 月',
+      duration: '实习期',
+      openings: '招募名额',
+      deadline: '截止日期',
+      requirements: '主要要求',
+      perks: '福利待遇',
+      noResults: '未找到符合条件的实习岗位。',
+      quotaAlert: '已达本月申请配额上限。请升级方案。',
+      applyModalTitle: '提交实习申请',
+      selectResume: '选择已验证的简历',
+      noResumeAlert: '您尚未创建验证简历，请先使用简历生成器制作。',
+      createResumeNow: '先制作简历',
+      coverLetterLabel: '求职信 / 自荐语',
+      submitApplication: '确认提交申请',
+    },
+    resume: {
+      title: '专业简历制作工具',
+      subtitle: '打造通过 ATS 筛选的标准简历。由邮箱 OTP 及 ₹50 Razorpay 支付安全保障。',
+      feeNotice: '官方生成费用：₹50.00 (含永久云存储及无限制附件调用)',
+      step1: '1. 填写简历内容',
+      step2: '2. 邮箱 OTP 验证',
+      step3: '3. 支付并获取 PDF',
+      personalInfo: '个人与联系信息',
+      fullName: '全名',
+      email: '电子邮件',
+      phone: '联系电话',
+      location: '所在地 (城市、国家)',
+      summary: '专业概述',
+      education: '学术背景',
+      degree: '专业 / 学位',
+      institution: '毕业院校',
+      year: '毕业年份',
+      score: '成绩 / GPA',
+      skills: '核心技术能力',
+      experience: '实习与工作经历',
+      projects: '主要项目经历',
+      certifications: '资格证书',
+      addEducation: '+ 添加学历',
+      addSkill: '+ 添加技能',
+      addExperience: '+ 添加经历',
+      addProject: '+ 添加项目',
+      addCertification: '+ 添加证书',
+      verifyOtpAndPay: '验证邮箱并前往支付',
+      otpPrompt: '请输入发送至您注册邮箱的 6 位数验证码。',
+      enterOtp: '输入 6 位数 OTP',
+      proceedToPayment: '通过 Razorpay 支付 ₹50',
+      downloadPdf: '下载官方 PDF',
+      paymentSuccess: '支付已验证！您的官方简历已生成并保存至个人档案。',
+    },
+    community: {
+      title: '公共学生社区空间',
+      subtitle: '与同行交流学习成果。发帖次数由您已接受的好友数量决定。',
+      postingStatus: '今日发帖限额',
+      createPost: '发布动态',
+      postPlaceholder: '分享您的实习进展或技术心得...',
+      uploadMedia: '附加媒体 (图片 / 视频 URL)',
+      publishBtn: '发布动态',
+      friendsCount: '已建立连接的好友',
+      zeroFriendsWarning: '0 好友：暂不可发帖，请先添加好友建立连接。',
+      limitReachedWarning: '今日发帖已达上限。',
+      unlimitedPosts: '10+ 位好友：已解锁无限发帖！',
+      like: '赞',
+      comment: '评论',
+      share: '分享',
+      commentsHeader: '评论交流',
+      addComment: '写下您的看法...',
+      connectWithPeers: '探索并添加好友',
+      sendFriendRequest: '添加好友',
+      connected: '已互为好友',
+      instantConnectBtn: '快速连接 (测试演示)',
+    },
+    loginHistory: {
+      title: '安全审计与登录历史',
+      subtitle: '全面追踪登录设备、浏览器及 IP 记录。数据严格仅供本人查阅。',
+      timestamp: '时间戳',
+      browser: '浏览器内核',
+      os: '操作系统',
+      device: '设备类别',
+      ipAddress: 'IP 地址',
+      status: '认证结果',
+      reason: '拦截原因 / 备注',
+      successBadge: '已授权',
+      blockedBadge: '已拦截',
+      isolationNotice: '安全隔离：严格限制仅可查询本账号记录。',
+    },
+    subscription: {
+      title: '订阅方案与申请限额',
+      subtitle: '扩大您的投递范围。支付仅在每日 10:00 AM 至 11:00 AM IST 期间开放。',
+      currentPlan: '当前方案',
+      applicationsUsed: '本月已投递次数',
+      quotaRemaining: '剩余可用投递',
+      upgradePlan: '升级订阅',
+      selectPlan: '选择此方案',
+      checkoutWindowNotice: '官方支付窗口：每日 10:00 AM – 11:00 AM IST',
+      checkoutWindowActive: '支付窗口当前已开放。',
+      checkoutWindowClosed: '支付窗口已关闭。支付服务仅在 10:00 AM - 11:00 AM IST 开放。',
+      freePlanName: '免费方案',
+      freePlanPrice: '₹0 / 月',
+      freePlanAllowance: '1 次申请 / 月',
+      bronzePlanName: '青铜方案',
+      bronzePlanPrice: '₹100 / 月',
+      bronzePlanAllowance: '3 次申请 / 月',
+      silverPlanName: '白银方案',
+      silverPlanPrice: '₹300 / 月',
+      silverPlanAllowance: '5 次申请 / 月',
+      goldPlanName: '黄金方案',
+      goldPlanPrice: '₹1,000 / 月',
+      goldPlanAllowance: '无限次申请',
+      invoicesTitle: '账单发票记录',
+      invoiceNum: '发票编号',
+      date: '开票日期',
+      amount: '支付金额',
+      reference: '支付流水号',
+      downloadInvoice: '查看发票',
+    },
+    auth: {
+      loginTitle: '登录 InternConnect',
+      registerTitle: '创建您的学生账户',
+      forgotPasswordTitle: '重置访问密码',
+      emailOrPhone: '注册邮箱或手机号',
+      email: '电子邮箱',
+      phone: '手机号码 (+91...)',
+      password: '登录密码',
+      fullName: '法定全名',
+      signInBtn: '立即登录',
+      signUpBtn: '完成注册',
+      noAccount: '还没有账号？',
+      haveAccount: '已有账号？',
+      forgotPasswordLink: '忘记密码？',
+      resetNotice: 'You can use this option only once per day.',
+      requestResetBtn: '获取临时密码',
+      chromeOtpTitle: 'Google Chrome 安全校验',
+      chromeOtpPrompt: '检测到 Google Chrome 浏览器。为保障账号安全，请输入发送至邮箱的 6 位 OTP 验证码。',
+      verifyChromeOtpBtn: '验证 OTP 并进入',
+      mobileWindowAlert: '移动端设备登录仅在 10:00 AM 至 1:00 PM IST 期间开放。',
+    },
+    settings: {
+      title: '账户设置',
+      changePasswordTitle: '修改密码',
+      currentPassword: '当前密码',
+      newPassword: '新安全密码',
+      updatePasswordBtn: '更新密码',
+      languageTitle: '平台语言偏好',
+      frenchOtpTitle: '法语安全验证',
+      frenchOtpPrompt: '按安全策略要求，切换至法语需完成邮箱 OTP 验证。',
+      verifyFrenchBtn: '验证并启用法语',
+    },
+    legal: {
+      privacyTitle: '隐私保护政策',
+      termsTitle: '用户服务协议',
+      lastUpdated: '最后更新：2026年10月',
+    },
+    common: {
+      loading: '安全加载中...',
+      cancel: '取消',
+      close: '关闭',
+      save: '保存更改',
+      error: '发生错误',
+      success: '操作成功',
+    },
+  },
+
+  fr: {
+    nav: {
+      home: 'Accueil',
+      browseInternships: 'Stages',
+      resumeBuilder: 'Générateur de CV',
+      publicSpace: 'Communauté',
+      subscriptions: 'Tarifs et Forfaits',
+      loginHistory: 'Journal de Sécurité',
+      profile: 'Mon Profil',
+      settings: 'Paramètres',
+      login: 'Connexion',
+      register: "S'inscrire",
+      logout: 'Déconnexion',
+      language: 'Langue',
+    },
+    home: {
+      heroTitle: 'Propulsez Votre Carrière avec des Stages Vérifiés',
+      heroSubtitle: 'Collaborez avec des entreprises de pointe, créez des CV vérifiés et échangez au sein d’une communauté étudiante de confiance.',
+      exploreBtn: 'Explorer les Offres',
+      buildResumeBtn: 'Créer mon CV (₹50)',
+      featuredHeading: 'Stages d’Excellence à Fort Impact',
+      categoriesHeading: 'Parcourir par Secteur',
+      statsApplications: '+12 500 Candidatures Traitées',
+      statsCompanies: '+450 Entreprises Partenaires',
+      statsStipend: 'Gratification Maximale de ₹35 000/mois',
+      whyTitle: 'Pourquoi Choisir InternConnect',
+      why1Title: 'Sécurité Zero-Trust',
+      why1Desc: 'Contrôle OTP sur Google Chrome, créneau horaire mobile strict et isolation des données.',
+      why2Title: 'CV et Paiements Cryptographiques',
+      why2Desc: 'Signature Razorpay certifiée et génération instantanée de PDF sécurisé.',
+      why3Title: 'Communauté d’Étudiants Vérifiée',
+      why3Desc: 'Limites de publication quotidiennes calculées selon vos amitiés confirmées.',
+    },
+    internships: {
+      title: 'Découvrir les Opportunités de Stage',
+      subtitle: 'Trouvez des stages en télétravail ou sur site avec d’excellentes gratifications.',
+      searchPlaceholder: 'Rechercher par poste, entreprise ou compétences...',
+      allCategories: 'Toutes les Spécialités',
+      remoteOnly: 'Télétravail Uniquement',
+      minStipend: 'Gratification Minimum',
+      applyNow: 'Postuler',
+      applied: 'Postulé',
+      viewDetails: 'Détails de l’Offre',
+      stipendMonth: '/ mois',
+      duration: 'Durée',
+      openings: 'Postes Disponibles',
+      deadline: 'Date Limite',
+      requirements: 'Prérequis',
+      perks: 'Avantages',
+      noResults: 'Aucun stage ne correspond à vos filtres actuels.',
+      quotaAlert: 'Quota de candidatures mensuel atteint. Veuillez mettre à niveau votre forfait.',
+      applyModalTitle: 'Postuler au Stage',
+      selectResume: 'Sélectionner un CV Vérifié',
+      noResumeAlert: 'Vous n’avez aucun CV vérifié. Veuillez d’abord en créer un.',
+      createResumeNow: 'Créer mon CV d’Abord',
+      coverLetterLabel: 'Lettre de Motivation',
+      submitApplication: 'Envoyer ma Candidature',
+    },
+    resume: {
+      title: 'Générateur Professionnel de CV',
+      subtitle: 'Concevez un CV conforme aux normes ATS. Sécurisé par OTP e-mail et paiement de ₹50 via Razorpay.',
+      feeNotice: 'Tarif Officiel : ₹50.00 (Inclut hébergement cloud sécurisé et pièces jointes illimitées)',
+      step1: '1. Informations du CV',
+      step2: '2. Vérification OTP par E-mail',
+      step3: '3. Paiement Razorpay et PDF',
+      personalInfo: 'Coordonnées Personnelles',
+      fullName: 'Nom Complet',
+      email: 'Adresse E-mail',
+      phone: 'Téléphone',
+      location: 'Localisation',
+      summary: 'Profil Professionnel',
+      education: 'Parcours Académique',
+      degree: 'Diplôme / Formation',
+      institution: 'Établissement / Université',
+      year: 'Année d’Obtention',
+      score: 'Moyenne / Mention',
+      skills: 'Compétences Clés',
+      experience: 'Expériences Professionnelles',
+      projects: 'Projets Notables',
+      certifications: 'Certifications',
+      addEducation: '+ Ajouter une Formation',
+      addSkill: '+ Ajouter une Compétence',
+      addExperience: '+ Ajouter une Expérience',
+      addProject: '+ Ajouter un Projet',
+      addCertification: '+ Ajouter une Certification',
+      verifyOtpAndPay: 'Vérifier l’E-mail et Passer au Paiement',
+      otpPrompt: 'Saisissez le code à 6 chiffres envoyé à votre adresse e-mail.',
+      enterOtp: 'Code OTP à 6 chiffres',
+      proceedToPayment: 'Régler ₹50 via Razorpay',
+      downloadPdf: 'Télécharger le PDF Officiel',
+      paymentSuccess: 'Paiement validé ! Votre CV officiel est généré et rattaché à votre compte.',
+    },
+    community: {
+      title: 'Espace Communautaire Étudiant',
+      subtitle: 'Échangez avec vos pairs. Vos quotas de publication dépendent de vos amis acceptés.',
+      postingStatus: 'Quota Quotidien de Publication',
+      createPost: 'Créer une Publication',
+      postPlaceholder: 'Partagez vos avancées ou réflexions du jour...',
+      uploadMedia: 'Attacher un Média (URL Image / Vidéo)',
+      publishBtn: 'Publier',
+      friendsCount: 'Amis Confirmés',
+      zeroFriendsWarning: '0 ami : Vous ne pouvez pas encore publier. Connectez-vous avec des amis.',
+      limitReachedWarning: 'Limite quotidienne atteinte pour votre palier.',
+      unlimitedPosts: '10+ Amis : Publications illimitées débloquées !',
+      like: 'J’aime',
+      comment: 'Commenter',
+      share: 'Partager',
+      commentsHeader: 'Réponses',
+      addComment: 'Ajouter une réponse...',
+      connectWithPeers: 'Découvrir des Étudiants',
+      sendFriendRequest: 'Se Connecter',
+      connected: 'Connecté',
+      instantConnectBtn: 'Connexion Rapide (Démo)',
+    },
+    loginHistory: {
+      title: 'Audit de Sécurité et Connexions',
+      subtitle: 'Historique exhaustif des accès. Vos données sont rigoureusement isolées.',
+      timestamp: 'Horodatage',
+      browser: 'Navigateur',
+      os: 'Système d’Exploitation',
+      device: 'Catégorie d’Appareil',
+      ipAddress: 'Adresse IP',
+      status: 'Statut',
+      reason: 'Remarques / Motif',
+      successBadge: 'Autorisé',
+      blockedBadge: 'Bloqué',
+      isolationNotice: 'Principe d’isolation : Vous ne visualisez que vos propres connexions.',
+    },
+    subscription: {
+      title: 'Forfaits d’Abonnement et Quotas',
+      subtitle: 'Multipliez vos candidatures. Les paiements ne sont autorisés qu’entre 10h00 et 11h00 IST.',
+      currentPlan: 'Forfait Actuel',
+      applicationsUsed: 'Candidatures Utilisées ce Mois',
+      quotaRemaining: 'Candidatures Restantes',
+      upgradePlan: 'Changer de Forfait',
+      selectPlan: 'Choisir ce Forfait',
+      checkoutWindowNotice: 'Créneau Officiel de Paiement : 10h00 – 11h00 IST (Asia/Kolkata)',
+      checkoutWindowActive: 'Le créneau de paiement est actuellement OUVERT.',
+      checkoutWindowClosed: 'Le créneau de paiement est FERMÉ. Paiements acceptés de 10h00 à 11h00 IST.',
+      freePlanName: 'Forfait Gratuit',
+      freePlanPrice: '₹0 / mois',
+      freePlanAllowance: '1 candidature / mois',
+      bronzePlanName: 'Forfait Bronze',
+      bronzePlanPrice: '₹100 / mois',
+      bronzePlanAllowance: '3 candidatures / mois',
+      silverPlanName: 'Forfait Argent',
+      silverPlanPrice: '₹300 / mois',
+      silverPlanAllowance: '5 candidatures / mois',
+      goldPlanName: 'Forfait Or',
+      goldPlanPrice: '₹1 000 / mois',
+      goldPlanAllowance: 'Candidatures Illimitées',
+      invoicesTitle: 'Factures et Historique',
+      invoiceNum: 'Numéro de Facture',
+      date: 'Date',
+      amount: 'Montant Réglé',
+      reference: 'Référence Razorpay',
+      downloadInvoice: 'Consulter la Facture',
+    },
+    auth: {
+      loginTitle: 'Connexion à InternConnect',
+      registerTitle: 'Créer mon Compte Étudiant',
+      forgotPasswordTitle: 'Récupération de Compte',
+      emailOrPhone: 'E-mail ou Téléphone Enregistré',
+      email: 'Adresse E-mail',
+      phone: 'Téléphone (+91...)',
+      password: 'Mot de Passe',
+      fullName: 'Nom et Prénom',
+      signInBtn: 'Se Connecter',
+      signUpBtn: 'Finaliser l’Inscription',
+      noAccount: 'Pas encore de compte ?',
+      haveAccount: 'Déjà inscrit ?',
+      forgotPasswordLink: 'Mot de passe oublié ?',
+      resetNotice: 'You can use this option only once per day.',
+      requestResetBtn: 'Envoyer un Mot de Passe Temporaire',
+      chromeOtpTitle: 'Contrôle de Sécurité Google Chrome',
+      chromeOtpPrompt: 'Navigateur Google Chrome détecté. Saisissez le code OTP à 6 chiffres envoyé à votre adresse e-mail.',
+      verifyChromeOtpBtn: 'Valider l’OTP et Accéder',
+      mobileWindowAlert: 'Les connexions mobiles sont autorisées uniquement de 10h00 à 13h00 IST.',
+    },
+    settings: {
+      title: 'Paramètres du Compte',
+      changePasswordTitle: 'Modifier le Mot de Passe',
+      currentPassword: 'Mot de Passe Actuel',
+      newPassword: 'Nouveau Mot de Passe',
+      updatePasswordBtn: 'Mettre à Jour le Mot de Passe',
+      languageTitle: 'Langue de la Plateforme',
+      frenchOtpTitle: 'Vérification de Sécurité (Français)',
+      frenchOtpPrompt: 'Le passage en français exige une vérification stricte par OTP par e-mail.',
+      verifyFrenchBtn: 'Valider et Activer le Français',
+    },
+    legal: {
+      privacyTitle: 'Politique de Confidentialité',
+      termsTitle: 'Conditions Générales d’Utilisation',
+      lastUpdated: 'Dernière mise à jour : Octobre 2026',
+    },
+    common: {
+      loading: 'Traitement sécurisé...',
+      cancel: 'Annuler',
+      close: 'Fermer',
+      save: 'Enregistrer',
+      error: 'Une erreur est survenue',
+      success: 'Opération réussie',
+    },
+  },
+};

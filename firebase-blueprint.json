@@ -1,0 +1,268 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Authenticated student user account record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 256 },
+        "phone": { "type": "string", "maxLength": 32 },
+        "fullName": { "type": "string", "maxLength": 128 },
+        "passwordHash": { "type": "string", "maxLength": 256 },
+        "role": { "type": "string", "enum": ["student", "employer", "admin"] },
+        "preferredLanguage": { "type": "string", "enum": ["en", "es", "hi", "pt", "zh", "fr"] },
+        "mustChangePassword": { "type": "boolean" },
+        "lastPasswordResetAt": { "type": "string", "format": "date-time" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "email", "fullName", "role", "createdAt"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Public and private profile details for a student",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128 },
+        "headline": { "type": "string", "maxLength": 160 },
+        "bio": { "type": "string", "maxLength": 2000 },
+        "avatarUrl": { "type": "string", "maxLength": 1000 },
+        "location": { "type": "string", "maxLength": 128 },
+        "education": { "type": "array" },
+        "skills": { "type": "array" },
+        "experience": { "type": "array" },
+        "certifications": { "type": "array" },
+        "socialLinks": { "type": "object" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId"]
+    },
+    "Internship": {
+      "title": "Internship",
+      "description": "Internship opportunities available on InternConnect",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 200 },
+        "companyName": { "type": "string", "maxLength": 128 },
+        "companyLogo": { "type": "string", "maxLength": 1000 },
+        "location": { "type": "string", "maxLength": 128 },
+        "isRemote": { "type": "boolean" },
+        "category": { "type": "string", "maxLength": 64 },
+        "stipend": { "type": "number" },
+        "stipendPeriod": { "type": "string", "enum": ["month", "lump-sum", "unpaid"] },
+        "duration": { "type": "string", "maxLength": 64 },
+        "deadline": { "type": "string", "format": "date-time" },
+        "description": { "type": "string", "maxLength": 5000 },
+        "requirements": { "type": "array" },
+        "perks": { "type": "array" },
+        "openings": { "type": "number" },
+        "status": { "type": "string", "enum": ["active", "closed", "draft"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "title", "companyName", "category", "stipend", "status", "createdAt"]
+    },
+    "Application": {
+      "title": "Application",
+      "description": "Internship application submitted by a student",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "internshipId": { "type": "string", "maxLength": 128 },
+        "studentId": { "type": "string", "maxLength": 128 },
+        "studentName": { "type": "string", "maxLength": 128 },
+        "studentEmail": { "type": "string", "maxLength": 256 },
+        "resumeId": { "type": "string", "maxLength": 128 },
+        "coverLetter": { "type": "string", "maxLength": 3000 },
+        "status": { "type": "string", "enum": ["applied", "under_review", "shortlisted", "rejected", "accepted"] },
+        "submittedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "internshipId", "studentId", "resumeId", "status", "submittedAt"]
+    },
+    "Resume": {
+      "title": "Resume",
+      "description": "Structured student resume created via Resume Builder",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 128 },
+        "content": { "type": "object" },
+        "paymentVerified": { "type": "boolean" },
+        "paymentTransactionId": { "type": "string", "maxLength": 128 },
+        "amountPaid": { "type": "number" },
+        "pdfDataUrl": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "title", "paymentVerified", "createdAt"]
+    },
+    "Post": {
+      "title": "Post",
+      "description": "Community feed post in Public Space",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "authorId": { "type": "string", "maxLength": 128 },
+        "authorName": { "type": "string", "maxLength": 128 },
+        "authorAvatar": { "type": "string", "maxLength": 1000 },
+        "content": { "type": "string", "maxLength": 2000 },
+        "mediaUrl": { "type": "string", "maxLength": 2000 },
+        "mediaType": { "type": "string", "enum": ["image", "video", "none"] },
+        "likesCount": { "type": "number" },
+        "commentsCount": { "type": "number" },
+        "sharesCount": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "authorId", "content", "createdAt"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "Comment on a Public Space post",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "postId": { "type": "string", "maxLength": 128 },
+        "authorId": { "type": "string", "maxLength": 128 },
+        "authorName": { "type": "string", "maxLength": 128 },
+        "content": { "type": "string", "maxLength": 1000 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "postId", "authorId", "content", "createdAt"]
+    },
+    "Friendship": {
+      "title": "Friendship",
+      "description": "Accepted friendship connection between two students",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 256 },
+        "userA": { "type": "string", "maxLength": 128 },
+        "userB": { "type": "string", "maxLength": 128 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userA", "userB", "createdAt"]
+    },
+    "FriendRequest": {
+      "title": "FriendRequest",
+      "description": "Connection invitation between students",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 256 },
+        "fromUserId": { "type": "string", "maxLength": 128 },
+        "toUserId": { "type": "string", "maxLength": 128 },
+        "status": { "type": "string", "enum": ["pending", "accepted", "declined"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "respondedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "fromUserId", "toUserId", "status", "createdAt"]
+    },
+    "LoginHistory": {
+      "title": "LoginHistory",
+      "description": "Audit record of login attempts",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 256 },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "browser": { "type": "string", "maxLength": 64 },
+        "os": { "type": "string", "maxLength": 64 },
+        "deviceCategory": { "type": "string", "enum": ["desktop", "laptop", "mobile", "tablet", "unknown"] },
+        "ip": { "type": "string", "maxLength": 64 },
+        "success": { "type": "boolean" },
+        "blockedReason": { "type": "string", "maxLength": 256 }
+      },
+      "required": ["id", "email", "timestamp", "browser", "os", "deviceCategory", "success"]
+    },
+    "Subscription": {
+      "title": "Subscription",
+      "description": "Student monthly subscription and application quotas",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128 },
+        "planId": { "type": "string", "enum": ["free", "bronze", "silver", "gold"] },
+        "monthlyPrice": { "type": "number" },
+        "monthlyAllowance": { "type": "number" },
+        "applicationsUsed": { "type": "number" },
+        "cycleStartDate": { "type": "string", "format": "date-time" },
+        "cycleEndDate": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["active", "cancelled", "expired"] },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "planId", "monthlyAllowance", "applicationsUsed", "status"]
+    },
+    "Invoice": {
+      "title": "Invoice",
+      "description": "Official billing invoice generated upon verified payment",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "invoiceNumber": { "type": "string", "maxLength": 64 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "userEmail": { "type": "string", "maxLength": 256 },
+        "userName": { "type": "string", "maxLength": 128 },
+        "planId": { "type": "string", "maxLength": 32 },
+        "planName": { "type": "string", "maxLength": 64 },
+        "amountPaid": { "type": "number" },
+        "currency": { "type": "string", "maxLength": 8 },
+        "transactionReference": { "type": "string", "maxLength": 128 },
+        "subscriptionPeriodStart": { "type": "string", "format": "date-time" },
+        "subscriptionPeriodEnd": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["paid", "refunded"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "invoiceNumber", "userId", "amountPaid", "transactionReference", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Private student and employer accounts"
+    },
+    "/profiles/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "Public student profile summaries"
+    },
+    "/internships/{internshipId}": {
+      "schema": { "$ref": "#/entities/Internship" },
+      "description": "Active internship listings"
+    },
+    "/applications/{applicationId}": {
+      "schema": { "$ref": "#/entities/Application" },
+      "description": "Job/internship applications"
+    },
+    "/resumes/{resumeId}": {
+      "schema": { "$ref": "#/entities/Resume" },
+      "description": "Verified student resumes"
+    },
+    "/posts/{postId}": {
+      "schema": { "$ref": "#/entities/Post" },
+      "description": "Public Space community posts"
+    },
+    "/posts/{postId}/comments/{commentId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Public comments on community posts"
+    },
+    "/friendships/{friendshipId}": {
+      "schema": { "$ref": "#/entities/Friendship" },
+      "description": "Accepted friendships between students"
+    },
+    "/friendRequests/{requestId}": {
+      "schema": { "$ref": "#/entities/FriendRequest" },
+      "description": "Direct student connection invitations"
+    },
+    "/loginHistory/{historyId}": {
+      "schema": { "$ref": "#/entities/LoginHistory" },
+      "description": "Security audit login attempts"
+    },
+    "/subscriptions/{userId}": {
+      "schema": { "$ref": "#/entities/Subscription" },
+      "description": "Monthly internship subscription quota trackers"
+    },
+    "/invoices/{invoiceId}": {
+      "schema": { "$ref": "#/entities/Invoice" },
+      "description": "Verified subscription invoices"
+    }
+  }
+}
